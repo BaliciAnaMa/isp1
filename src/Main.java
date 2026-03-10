@@ -1,20 +1,19 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
-  ArrayList<Student> listaStudenti = new ArrayList<>();
+  //tema casa laborator 2
+  HashSet<String> listaStudenti = new HashSet<>();
+listaStudenti.add("BaliciAnaism21/1");
+  listaStudenti.add("PopaMariaTI21/1");
+  listaStudenti.add("PopaAlisTI21/2");
+  System.out.println("Studentii din set:");
+  listaStudenti.forEach(System.out::println);
 
-  listaStudenti.add(new Student("Balici","Ana","xd987089","ism21/1"));
-    listaStudenti.add(new Student("Popi","Maria","xd907009","ism21/1"));
-  listaStudenti.add(new Student("Popa", "Maria", "120", "TI21/1"));
-  listaStudenti.add(new Student("Popa", "Alis", "120", "TI21/2"));
-  for(Student student : listaStudenti){
-    System.out.println(student);
-  }
+  System.out.println("Este Alis Popa? " +
+          listaStudenti.contains("PopaAlisTI21/2"));
 
-  System.out.println(Student.existaStudent(listaStudenti,
-          new Student("Popa", "Alis", "120", "TI21/2")));
-  System.out.println(Student.existaStudent(listaStudenti,
-          new Student("Popa", "Maria", "112", "TI21/1")));
+  System.out.println("Este Maria Popa? " +
+          listaStudenti.contains("PopaMariaTI21/1"));
 
   List<Integer> x = new ArrayList();
     x.add(1);
