@@ -18,10 +18,6 @@ public class Student {
 
     }
 
-    /*public String getPrenume() {
-        return prenume;
-    }*/
-
     public String getNume() {
         return nume;
     }

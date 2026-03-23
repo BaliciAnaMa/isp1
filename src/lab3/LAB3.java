@@ -52,7 +52,7 @@ public class LAB3 {
         } catch (IOException e) {
             e.printStackTrace();
         }
-  //problema 2
+  //problema 2+3 cu modificarile la sortare
         try {
             List<String> lines = Files.readAllLines(Paths.get("src/lab3/studenti_in.txt"));
             List<Student> studenti = new ArrayList<>();
@@ -65,20 +65,26 @@ public class LAB3 {
                 String formatieDeStudiu = parts[3].trim();
                 studenti.add(new Student(nume, prenume, nrmatricol, formatieDeStudiu));
             }
-            System.out.println(" Studenti cititi");
-            for (Student s : studenti) {
+            System.out.println(" ");
+            System.out.println(" Studentii cititi ");
+            for (int i = 0; i < studenti.size(); i++) {
+                Student s = studenti.get(i);
                 System.out.println(s);
             }
-            Collections.sort(studenti, (s1, s2) -> s1.getNume().compareTo(s2.getNume()));
-
+            Collections.sort(studenti, (s1, s2) -> {
+                int cmp = s1.getFormatieDeStudiu().compareTo(s2.getFormatieDeStudiu());
+                if (cmp != 0) return cmp;
+                return s1.getNume().compareTo(s2.getNume());
+            });
             List<String> output = new ArrayList<>();
-            for (Student s : studenti) {
-                output.add(s.toString());
+            for (int i = 0; i < studenti.size(); i++) {
+                Student s = studenti.get(i);
+                String textStudent = s.toString();
+                output.add(textStudent);
             }
-
-            Files.write(Paths.get("studenti_out.txt"), output);
-
-        } catch (IOException e) {
+            Files.write(Paths.get("studenti_out_sorted.txt"), output);
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
       }
