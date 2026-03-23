@@ -17,7 +17,6 @@ public class Student {
         return nume + " " + prenume + " " + nrmatricol + " " + formatieDeStudiu;
 
     }
-
     public String getNume() {
         return nume;
     }
