@@ -76,5 +76,26 @@ public class AppLab4 {
         for (Student studentCurent : mapStudenti.values()) {
             System.out.println(studentCurent);
         }
+        //problema 4.5.3
+        System.out.println(" ");
+        System.out.println("Verifica Studenti");
+        HashMap<String, Student> mapDupaNume = new HashMap<>();
+        for (Student studentCurent : mapStudenti.values()) {
+            String cheie = studentCurent.getPrenume() + "-" + studentCurent.getNume();
+            mapDupaNume.put(cheie, studentCurent);
+        }
+        double n1 = gasesteNota("Bianca", "Popescu", mapDupaNume);
+        double n2 = gasesteNota("Ioan", "Popa", mapDupaNume);
+        System.out.println("Nota Bianca Popescu->" + n1);
+        System.out.println("Nota Ioan Popa->" + n2);
+    }
+    public static double gasesteNota(String prenume, String nume, HashMap<String, Student> studenti) {
+        String cheie = prenume + "-" + nume;
+        Student s = studenti.get(cheie);
+        if (s != null) {
+            return s.getNota();
+        } else {
+            return 0.0f;
+        }
     }
 }
