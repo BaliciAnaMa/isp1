@@ -18,5 +18,15 @@ public class Main {
         System.out.println("Area = " + sq.getArea() + " details: " + sq);
        System.out.println("Total instance count is " + Form.getInstanceCount());
 
+       //7.6.2
+        PasswordMaker pm2 = PasswordMaker.getInstance();
+        System.out.println("\n7.6.2 a+b) Generated passwords: ");
+        System.out.println("1:" + PasswordMaker.getInstance().getPassword());
+        System.out.println("2:" + PasswordMaker.getInstance().getPassword());
+        System.out.println("3:" + PasswordMaker.getInstance().getPassword());
+        System.out.println("4:" + pm2.getPassword());
+        System.out.println("5:" + pm2.getPassword());
+        System.out.println("\n7.6.2 c) Number of time getInstance() has been called: " + PasswordMaker.getCallingCounts());
     }
-}
+    }
+
