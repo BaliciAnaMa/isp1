@@ -1,0 +1,5 @@
+ID: 1025, Nume: Popa Andrei, Grupa: ISM142/2, Nota: 8.7, Bursa: 725.5
+ ID: 1024, Nume: Mihalcea Ioan, Grupa: ISM141/1, Nota: 9.8, Bursa: 801.1
+ ID: 1026, Nume: Prodan Anamaria, Grupa: TI131/1, Nota: 8.9, Bursa: 745.5
+ ID: 1029, Nume: Popescu Bianca, Grupa: TI131/1, Nota: 9.1, Bursa: 780.8
+ 
